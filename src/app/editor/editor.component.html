@@ -1,0 +1,18 @@
+<angular-editor 
+  [(ngModel)]="content" 
+  [config]="editorConfig">
+</angular-editor>
+
+<div>
+  <h3>Your Content:</h3>
+  <div [innerHTML]="content"></div>
+</div>
+
+
+<div>
+  <input 
+    type="text" 
+    placeholder="Enter image URL" 
+    #imageUrlInput 
+    (keyup.enter)="insertImage(imageUrlInput.value); imageUrlInput.value=''">
+</div>
